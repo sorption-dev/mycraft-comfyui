@@ -24,6 +24,8 @@
 
 3. Start ComfyUI.
 
+4. Go to http://localhost:8188/mycraft.
+
 ## 2. Install ComfyUI Dependencies
 
 This project uses the following dependencies to enhance the user experience:
