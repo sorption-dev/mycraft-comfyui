@@ -19,7 +19,7 @@
 2. Clone this repository into the `custom_nodes` directory:
     ```bash
     cd ComfyUI/custom_nodes
-    git clone https://github.com/uauaouau/mycraft-ui.git
+    git clone https://github.com/uauaouau/mycraft-comfyui.git
     ```
 
 3. Start ComfyUI.
