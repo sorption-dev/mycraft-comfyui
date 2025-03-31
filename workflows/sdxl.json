@@ -1,0 +1,300 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 165775230160894,
+      "steps": 35,
+      "cfg": 5.5,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "ddim_uniform",
+      "denoise": 1,
+      "model": [
+        "20",
+        0
+      ],
+      "positive": [
+        "1003",
+        0
+      ],
+      "negative": [
+        "1008",
+        0
+      ],
+      "latent_image": [
+        "46",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "27",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "valeraui/date/ui",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "20": {
+    "inputs": {
+      "PowerLoraLoaderHeaderWidget": {
+        "type": "PowerLoraLoaderHeaderWidget"
+      },
+      "➕ Add Lora": "",
+      "model": [
+        "27",
+        0
+      ],
+      "clip": [
+        "27",
+        1
+      ]
+    },
+    "class_type": "Power Lora Loader (rgthree)",
+    "_meta": {
+      "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "27": {
+    "inputs": {
+      "ckpt_name": "sdXL_v10.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "22": {
+    "inputs": {
+      "text": "a cat",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "PROMPT"
+    }
+  },
+  "1002": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "NEGATIVE PROMPT"
+    }
+  },
+  "1003": {
+    "inputs": {
+      "conditioning1": [
+        "22",
+        0
+      ],
+      "conditioning2": [
+        "1004",
+        0
+      ],
+      "conditioning3": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "ImpactConcatConditionings",
+    "_meta": {
+      "title": "Concat Conditionings"
+    }
+  },
+  "1004": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "STYLE PROMPT"
+    }
+  },
+  "23": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "LORA PROMPT"
+    }
+  },
+  "1007": {
+    "inputs": {
+      "text": "wrong hands, ugly figners, deformed body, watermark",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "NEGATIVE PROMPT CONSTANT"
+    }
+  },
+  "1008": {
+    "inputs": {
+      "conditioning1": [
+        "1002",
+        0
+      ],
+      "conditioning2": [
+        "1007",
+        0
+      ]
+    },
+    "class_type": "ImpactConcatConditionings",
+    "_meta": {
+      "title": "Concat Conditionings"
+    }
+  },
+  "1011": {
+    "inputs": {
+      "pixels": [
+        "18",
+        0
+      ],
+      "vae": [
+        "27",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "18": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 1024,
+      "height": 1024,
+      "crop": "disabled",
+      "image": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "19": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "Empty Image"
+    }
+  },
+  "46": {
+    "inputs": {
+      "select": 1,
+      "sel_mode": false,
+      "input1": [
+        "5",
+        0
+      ],
+      "input2": [
+        "1011",
+        0
+      ]
+    },
+    "class_type": "LatentSwitch",
+    "_meta": {
+      "title": "Switch (latent/legacy)"
+    }
+  },
+  "45": {
+    "inputs": {
+      "blend_factor": 1,
+      "blend_mode": "normal",
+      "image1": [
+        "19",
+        0
+      ],
+      "image2": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "Image Blend"
+    }
+  },
+  "37": {
+    "inputs": {
+      "url_or_path": "https://i.postimg.cc/TYbdk63X/test.png"
+    },
+    "class_type": "LoadImageFromUrlOrPath",
+    "_meta": {
+      "title": "LoadImageFromUrlOrPath"
+    }
+  },
+  "7777": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Mycraft Settings"
+    }
+  }
+}
