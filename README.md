@@ -1,50 +1,111 @@
-... добавить картинок ...
+![mycraft_preview](./docs/preview_01.png)
 
-# Get Started
+# Mycraft (Alpha Experimental Version)
 
-## 1. Install
+### Mycraft provides a limitless storyboard experience for image generation, powered by the ComfyUI API.
 
-1. Install the [ComfyUi](https://github.com/comfyanonymous/ComfyUI).
+- Each container functions as an independent ComfyUI workflow.
+- Supports workflows (text-to-text) and fine-tuning (image-to-image).
+- Supports [workflow customization](./CUSTOM_WORKFLOWS.md).
 
-2. Clone this repo into `custom_modules`:
-    ```
+
+
+## Get Started
+
+## 1. Installation
+
+1. Install [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
+
+2. Clone this repository into the `custom_nodes` directory:
+    ```bash
     cd ComfyUI/custom_nodes
     git clone https://github.com/uauaouau/mycraft-ui.git
     ```
 
-3. Start up ComfyUI.
+3. Start ComfyUI.
 
 ## 2. Install ComfyUI Dependencies
 
-This custom nodes are using to provide best user experience:
+This project uses the following dependencies to enhance the user experience:
 
 - [rgthree-comfy](https://github.com/rgthree/rgthree-comfy.git)
 - [Impact Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack)
 - [ComfyUI-load-image-from-url](https://github.com/tsogzark/ComfyUI-load-image-from-url)
 
+### Installation Options:
 
-Clone this repositories into `ComfyUI/custom_nodes` directory:
+- **Via ComfyUI Manager**: Automatically installs dependencies and unzips the `mycraft.zip` file using the provided install script.
+- **Manual Installation**: Clone the repositories into the `ComfyUI/custom_nodes` directory:
+    ```bash
+    git clone https://github.com/rgthree/rgthree-comfy.git
+    git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
+    git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git
+    ```
+
+    Then, unzip `mycraft.zip` into `/ComfyUI/custom_nodes/mycraft-comfyui`.
+
+After installation, the directory structure should look like this:
 
 ```
-git clone https://github.com/rgthree/rgthree-comfy.git
-
-git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
-
-git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git
+mycraft-comfyui
+├── ...
+├── mycraft
+│   ├── build
+│   ├── ...
+├── __init__.py
+├── mycraft.zip
+├── ...
 ```
 
-Also you can install it via ComfyUI Manager.
+## Workflows
 
-# Workflows
+This project currently supports **text-to-text** and **image-to-image** workflows using the **KSampler** sampler for models:
 
-This project are currently supports **text-to-text** and **image-to-image** workflows with **KSampler** sampler for models:
-
-- SDXL (workflows/sdxl.json)
-
-- Flux 1 Dev (workflows/flux.json)
+- **SDXL**: `workflows/sdxl.json`
+- **Flux 1 Dev**: `workflows/flux.json`
 
 ### Custom Workflows
 
-You can use your own workflow but there is some nodes that should exist with the constant node ids. [This is a list of nodes that **Mycraft** uses.](./CUSTOM_WORKFLOWS.md)
+You can use your own workflows, but certain nodes with specific constant IDs must be included. Refer to [this list of required nodes](./CUSTOM_WORKFLOWS.md).
+
+### [Learn More About Workflows](./CUSTOM_WORKFLOWS.md)
 
 
+
+# Lora Styles List
+
+![mycraft_preview](./docs/preview_02.png)
+
+Organize your Lora styles beautifully by creating a `.json` configuration file named after the corresponding `.safetensor` model.
+
+### Example Configuration File (`BW-000014.json`):
+
+```json
+{
+    "id": "BW-000014.safetensors",
+    "title": "B&W Manga Blocks",
+    "file_url": "https://civitai.com/api/download/models/564339?type=Model&format=SafeTensor",
+    "url": "https://civitai.com/models/507750/bandw-manga-blocks",
+    "author": "alvdansen",
+    "trigger": "black and white masterpiece illustration",
+    "default": 1,
+    "preview": [
+        "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9f9e3101-a4d7-472f-b18e-cd71ecc99fce/anim=false,width=450/BW_e000014_01_20240610214155.jpeg"
+    ]
+}
+```
+
+Place the `.json` file in the same directory as the `.safetensor` model file.
+
+---
+
+## Hotkeys
+
+- `[Select container]` + `Ctrl + D`: Duplicate container
+- `[Select container]` + `Alt` + Drag `Mouse`: Duplicate container
+- `[Select container]` + `Ctrl + X` or `Delete`: Delete container
+- `Mouse Scroll`: Zoom
+
+## Roadmap
+
+This is the minimal viable product version of Mycraft. Currently, it includes basic functionality, but many innovations are planned for future updates. These will enable modular and abstract customization, allowing the UI to be tailored to specific tasks.
