@@ -72,7 +72,7 @@
   "12": {
     "inputs": {
       "unet_name": "flux1-dev.safetensors",
-      "weight_dtype": "default"
+      "weight_dtype": "fp8_e4m3fn"
     },
     "class_type": "UNETLoader",
     "_meta": {
@@ -81,7 +81,7 @@
   },
   "13": {
     "inputs": {
-      "clip_name1": "t5xxl_fp16.safetensors",
+      "clip_name1": "t5xxl_fp8_e4m3fn.safetensors",
       "clip_name2": "clip_l.safetensors",
       "type": "flux",
       "device": "default"
@@ -126,6 +126,34 @@
       "title": "FluxGuidance Negative"
     }
   },
+  "18": {
+    "inputs": {
+      "upscale_method": "lanczos",
+      "width": 1024,
+      "height": 1024,
+      "crop": "disabled",
+      "image": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "19": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1,
+      "color": 0
+    },
+    "class_type": "EmptyImage",
+    "_meta": {
+      "title": "Empty Image"
+    }
+  },
   "20": {
     "inputs": {
       "PowerLoraLoaderHeaderWidget": {
@@ -133,7 +161,7 @@
       },
       "➕ Add Lora": "",
       "model": [
-        "12",
+        "7778",
         0
       ],
       "clip": [
@@ -144,6 +172,32 @@
     "class_type": "Power Lora Loader (rgthree)",
     "_meta": {
       "title": "Power Lora Loader (rgthree)"
+    }
+  },
+  "22": {
+    "inputs": {
+      "text": "a cat",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "PROMPT"
+    }
+  },
+  "23": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "LORA PROMPT"
     }
   },
   "29": {
@@ -195,19 +249,6 @@
       "title": "Concat Conditionings"
     }
   },
-  "23": {
-    "inputs": {
-      "text": "",
-      "clip": [
-        "20",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "LORA PROMPT"
-    }
-  },
   "33": {
     "inputs": {
       "text": "watermark",
@@ -234,19 +275,6 @@
       "title": "NEGATIVE PROMPT CONSTANT"
     }
   },
-  "22": {
-    "inputs": {
-      "text": "a cat",
-      "clip": [
-        "20",
-        1
-      ]
-    },
-    "class_type": "CLIPTextEncode",
-    "_meta": {
-      "title": "PROMPT"
-    }
-  },
   "37": {
     "inputs": {
       "url_or_path": "https://i.postimg.cc/TYbdk63X/test.png"
@@ -270,34 +298,6 @@
     "class_type": "VAEEncode",
     "_meta": {
       "title": "VAE Encode"
-    }
-  },
-  "18": {
-    "inputs": {
-      "upscale_method": "lanczos",
-      "width": 1024,
-      "height": 1024,
-      "crop": "disabled",
-      "image": [
-        "45",
-        0
-      ]
-    },
-    "class_type": "ImageScale",
-    "_meta": {
-      "title": "Upscale Image"
-    }
-  },
-  "19": {
-    "inputs": {
-      "width": 1024,
-      "height": 1024,
-      "batch_size": 1,
-      "color": 0
-    },
-    "class_type": "EmptyImage",
-    "_meta": {
-      "title": "Empty Image"
     }
   },
   "45": {
@@ -343,6 +343,20 @@
     "class_type": "CLIPTextEncode",
     "_meta": {
       "title": "Mycraft Settings"
+    }
+  },
+  "7778": {
+    "inputs": {
+      "model_type": "flux",
+      "rel_l1_thresh": 0.4,
+      "model": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "TeaCacheForImgGen",
+    "_meta": {
+      "title": "TeaCache For Img Gen"
     }
   }
 }
