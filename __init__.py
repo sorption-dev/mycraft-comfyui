@@ -12,7 +12,7 @@ import json
 NODE_CLASS_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS = {}
 
-WEBROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), "frontend-board", "build")
+WEBROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), "mycraft", "build")
 
 TEMP_UPLOAD = os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp_upload")
 
