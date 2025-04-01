@@ -11,7 +11,7 @@ def extract_zip(file_path, extract_to):
         print(f"Extracted {file_path} to {extract_to}")
 
 zip_file = "mycraft.zip"
-output_dir = "."
+output_dir = "mycraft"
 extract_zip(zip_file, output_dir)
 print("Mycraft UI installed successfully!")
 
