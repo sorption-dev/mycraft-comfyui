@@ -354,7 +354,7 @@
         0
       ]
     },
-    "class_type": "TeaCacheForImgGen",
+    "class_type": "TeaCache",
     "_meta": {
       "title": "TeaCache For Img Gen"
     }
