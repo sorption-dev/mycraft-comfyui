@@ -78,6 +78,12 @@ You can use your own workflows, but certain nodes with specific constant IDs mus
 
 ![mycraft_preview](./docs/preview_02.png)
 
+### ⚠️ It is recommended to organize your LoRA files in a parent directory named after the model class. 
+
+For example, instead of placing a file at `.../ComfyUI/models/loras/hello.safetensor`, consider using a structure like `.../ComfyUI/models/loras/sdxl/<filter-name>/hello.safetensor`. While the directory name as a filter name is not mandatory, it is highly beneficial when using filters in the browser UI.
+
+## Titles and Thumbnails
+
 Organize your Lora styles beautifully by creating a `.json` configuration file named after the corresponding `.safetensor` model.
 
 ### Example Configuration File (`BW-000014.json`):
