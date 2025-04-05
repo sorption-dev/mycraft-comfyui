@@ -71,6 +71,41 @@ This project currently supports **text-to-text** and **image-to-image** workflow
 - **SDXL**: `workflows/sdxl.json`
 - **Flux 1 Dev**: `workflows/flux.json`
 
+### Settings for Flux 1 Dev Workflow
+
+Please check the `workflows/flux.json` file and change `weight_dtype` value based on your needs:
+
+```json
+  "12": {
+    "inputs": {
+      "unet_name": "flux1-dev.safetensors",
+      "weight_dtype": "fp8_e4m3fn" // here
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+```
+
+So as the CLIPs:
+
+```json
+  "13": {
+    "inputs": {
+      "clip_name1": "t5xxl_fp16.safetensors", // here
+      "clip_name2": "clip_l.safetensors", // here
+      "type": "flux",
+      "device": "default"
+    },
+    "class_type": "DualCLIPLoader",
+    "_meta": {
+      "title": "DualCLIPLoader"
+    }
+  },
+```
+
+
 ### Custom Workflows
 
 You can use your own workflows, but certain nodes with specific constant IDs must be included. Refer to [this list of required nodes](./CUSTOM_WORKFLOWS.md).
