@@ -102,7 +102,7 @@
   },
   "15": {
     "inputs": {
-      "guidance": 8.3,
+      "guidance": 3.5,
       "conditioning": [
         "30",
         0
