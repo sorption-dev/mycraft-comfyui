@@ -111,7 +111,7 @@
       "title": "PROMPT"
     }
   },
-  "1002": {
+  "33": {
     "inputs": {
       "text": "",
       "clip": [
@@ -186,7 +186,7 @@
   "1008": {
     "inputs": {
       "conditioning1": [
-        "1002",
+        "33",
         0
       ],
       "conditioning2": [
