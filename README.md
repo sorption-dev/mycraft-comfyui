@@ -64,6 +64,21 @@ mycraft-comfyui
 ├── ...
 ```
 
+## Run Mycraft UI
+
+Since you have installed Mycraft UI as ComfyUI Custom Node you can open your ComfyUI instance and add `/mycraft` to address like:
+
+```
+http://localhost:8188/mycraft
+```
+
+or
+```
+http://0.0.0.0:8188/mycraft
+```
+
+It works offline also.
+
 ## Workflows
 
 This project currently supports **text-to-text** and **image-to-image** workflows using the **KSampler** sampler for models:
