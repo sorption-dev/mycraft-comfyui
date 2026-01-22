@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ..
 echo "[Mycraft UI] Installing dependencies..."
 git clone https://github.com/rgthree/rgthree-comfy.git 2>&1 | grep -q "already exists" && echo "[Mycraft UI] rgthree-comfy already exists. Skipped." || true

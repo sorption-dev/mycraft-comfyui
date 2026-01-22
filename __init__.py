@@ -1,9 +1,3 @@
-# DEPS
-## ComfyUI_JPS-Nodes
-## ComfyUI-TeaCache
-## was-node-suite-comfyui
-## rgthree-comfy
-
 # Node mappings
 NODE_CLASS_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS = {}
