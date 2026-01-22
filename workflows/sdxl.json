@@ -246,19 +246,18 @@
   "46": {
     "inputs": {
       "select": 1,
-      "sel_mode": false,
-      "input1": [
+      "latent_1": [
         "5",
         0
       ],
-      "input2": [
+      "latent_2": [
         "1011",
         0
       ]
     },
-    "class_type": "LatentSwitch",
+    "class_type": "Latent Switch (JPS)",
     "_meta": {
-      "title": "Switch (latent/legacy)"
+      "title": "Latent Switch (JPS)"
     }
   },
   "45": {
