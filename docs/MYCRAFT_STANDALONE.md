@@ -1,4 +1,4 @@
-![mycraft_preview](./docs/preview_01.png)
+![mycraft_preview](./preview_01.png)
 
 # Mycraft UI (standalone)
 
@@ -54,11 +54,11 @@ python main.py --preview-method auto --enable-cors-header https://mycraft.zashif
 
 1. Go to ... and paste your ComfyUI instance address. By default it is the `https://localhost:8188`.
 
-![install_step_1](./docs/mycraft_install_1.JPG)
+![install_step_1](./mycraft_install_1.JPG)
 
 2. Select the predefined workflow based on model.
 
-![install_step_2](./docs/mycraft_install_2.JPG)
+![install_step_2](./mycraft_install_2.JPG)
 
 3. After default workflow was defined in the step 2, now you can use Mycraft UI with your ComfyUI instance! 🎉🎆
 
