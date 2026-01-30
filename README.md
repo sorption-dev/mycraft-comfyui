@@ -67,31 +67,7 @@ By default Mycraft uses Civitai API to get your LORA files metadata automaticall
 
 To repeat this process manually you can press **Update Loras** button in **Select Styles** overlay.
 
-
-## Manual Lora Metadata (Experimental Beta)
-
-### Titles and Thumbnails
-
-Organize your Lora styles beautifully by creating a `.json` configuration file named after the corresponding `.safetensor` model.
-
-### Example Configuration File (`BW-000014.json`):
-
-```json
-{
-  "id": "BW-000014.safetensors",
-  "title": "B&W Manga Blocks",
-  "file_url": "https://civitai.com/api/download/models/564339?type=Model&format=SafeTensor",
-  "url": "https://civitai.com/models/507750/bandw-manga-blocks",
-  "author": "alvdansen",
-  "trigger": "black and white masterpiece illustration",
-  "default": 1,
-  "preview": [
-    "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9f9e3101-a4d7-472f-b18e-cd71ecc99fce/anim=false,width=450/BW_e000014_01_20240610214155.jpeg"
-  ]
-}
-```
-
-Place the `.json` file in the same directory as the `.safetensor` model file.
+> Make shure you have checked on true the **Settings - Use Styles List from Mycraft ComfyUI Plugin** option.
 
 
 ## Workflows
@@ -137,12 +113,6 @@ So as the CLIPs:
   },
 ```
 
-
-### Custom Workflows
-
-You can use your own workflows, but certain nodes with specific constant IDs must be included. Refer to [this list of required nodes](./CUSTOM_WORKFLOWS.md).
-
-### [Learn More About Workflows](./CUSTOM_WORKFLOWS.md)
 
 ## Hotkeys
 
