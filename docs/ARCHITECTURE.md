@@ -18,10 +18,10 @@ All application constants and settings in one place.
 
 ### 🛣️ `routes.py` - Web Routes (HTTP only)
 HTTP endpoint registration and request/response handling only.
-- `/recalculate_hashes` - trigger hash recalculation
-- `/list-loras` - get LoRA list
-- `/api/list-workflows` - get workflows list
-- `/api/upload-image` - image upload
+- `/mycraft/api/recalculate_hashes` - trigger hash recalculation
+- `/mycraft/api/list-loras` - get LoRA list
+- `/mycraft/api/list-workflows` - get workflows list
+- `/mycraft/api/upload-image` - image upload
 - React routes for SPA
 
 **Dependencies:** `aiohttp.web`, `server` (ComfyUI)

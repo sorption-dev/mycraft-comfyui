@@ -3,3 +3,4 @@ mycraft
 temp_upload/*
 !temp_upload/uploaded_files_here
 lorashashes.json
+.archive
