@@ -4,7 +4,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {}
 
 import os
 
-from .install import extract_mycraft_ui
+from .install_frontend import extract_mycraft_ui
 build_path = os.path.join(os.path.dirname(__file__), "mycraft", "build")
 if not os.path.exists(build_path):
     extract_mycraft_ui()
