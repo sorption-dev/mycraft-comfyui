@@ -12,13 +12,13 @@ from .file_scanner import scan_workflow_files
 def setup_routes():
     """Setup all web routes for the application"""
     
-    @server.PromptServer.instance.routes.get(SLUG + "/recalculate_hashes")
+    @server.PromptServer.instance.routes.get(SLUG + "/api/recalculate_hashes")
     async def recalculate_hashes(request):
         """Recalculate all LoRA hashes"""
         await generate_lora_hashes()
         return web.json_response({"status": "done"})
 
-    @server.PromptServer.instance.routes.get(SLUG + "/list-loras")
+    @server.PromptServer.instance.routes.get(SLUG + "/api/list-loras")
     async def list_loras(request):
         """Get list of all LoRA files"""
         files = get_lora_files()
@@ -37,7 +37,7 @@ def setup_routes():
         reader = await request.multipart()
         field = await reader.next()
         filename = field.filename
-        temp_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp_upload")
+        temp_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "temp_upload")
         os.makedirs(temp_dir, exist_ok=True)
         file_path = os.path.join(temp_dir, filename)
         file_path_for_web = f"{SLUG}/temp_upload/{filename}"
