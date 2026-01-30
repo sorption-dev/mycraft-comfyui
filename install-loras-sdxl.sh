@@ -2,6 +2,9 @@
 
 echo "[Mycraft UI Preview] Installing SDXL lora models..."
 
+mkdir -p "../../models/loras/sdxl/style"
+mkdir -p "../../models/loras/sdxl/details"
+
 curl -L -o "../../models/loras/sdxl/style/Araminta_Soft_Focus_3D-000013.safetensors" "https://civitai.com/api/download/models/574502?type=Model&format=SafeTensor"
 
 curl -L -o "../../models/loras/sdxl/style/Little_Tinies.safetensors" "https://civitai.com/api/download/models/556905"
