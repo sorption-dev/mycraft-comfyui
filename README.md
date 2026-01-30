@@ -1,4 +1,4 @@
-![mycraft_preview](./docs/preview_01.jpg)
+![mycraft_preview](./docs/preview_01.JPG)
 
 # Mycraft (Alpha Experimental Version)
 
@@ -51,7 +51,7 @@ It works offline also.
 
 # Beautiful Lora Styles Catalog
 
-![mycraft_preview](./docs/preview_02.jpg)
+![mycraft_preview](./docs/preview_02.JPG)
 
 ### ⚠️ It is recommended to organize your LoRA files in a parent directory named after the model class.
 
